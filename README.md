@@ -12,6 +12,10 @@ and autopublishes it to youtube.
 # Watch the Video
 [<img src="https://img.youtube.com/vi/13rF7awO29U/maxresdefault.jpg" width="50%">](https://youtu.be/13rF7awO29U)
 
+# In Progress Opening Scroll
+[<img src="https://img.youtube.com/vi/Nud1K51oGWQ/maxresdefault.jpg" width="50%">](https://youtu.be/Nud1K51oGWQ)
+
+
 # In Progress
 - [ ] Confetti Banner with release details such as commit log using github api
 - [ ] Push to docker hub
