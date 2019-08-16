@@ -1,0 +1,27 @@
+Introducing SAM-CLI Version 0.18.0 
+
+
+Telemetry for SAM CLI
+
+
+SAM CLI is adding telemetry. In addition to existing feedback, telemetry allows us to better understand our customer’s needs, common CLI scenarios and existing issues. The information collected will include generic usage metrics, system and environment information, and errors. These generic metrics will inform our product decisions and help us continue to deliver features and enhancements that improve the customer experience.
+
+
+Read for more information on the user experience and opt-out instructions.
+
+
+Changelog
+
+
+Revert feat(start-api) CloudFormation AWS--ApiGateway--RestApi support
+
+feat- Telemetry Implementation
+
+chore- Bumping to v0.19.0 and updating Telemetry Opt-Out URL
+
+fix- More robust connections to telemetry backend
+
+fix- Update telemetry prompt wording
+
+feat- Set execution environment when calling AWS CLI 
+

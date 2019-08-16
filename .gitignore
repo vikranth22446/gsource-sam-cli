@@ -1,0 +1,13 @@
+lib/clients_secrets.json
+.idea/
+.vscode/
+*.token
+*.avi
+*.mp4
+venv/
+node_modules
+npm-debug.log
+*.pem
+.env
+coverage
+now.json

@@ -1,0 +1,48 @@
+{
+  "name": "tap-release-github-app",
+  "version": "1.6.0",
+  "description": "A GitHub app that automatically runs gource on new realses. Extended from tap-release-github-app",
+  "author": "Tim Lucas (http://toolmantim.com)",
+  "license": "ISC",
+  "repository": "toolmantim/tap-release",
+  "scripts": {
+    "dev": "nodemon --exec \"npm start\"",
+    "start": "probot run ./index.js",
+    "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY_BASE64 | base64 -d) npm start",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
+    "simulate": "probot simulate release test/fixtures/release.json ./index.js",
+    "postversion": "npm run test && git push && git push --tags && npm publish && npm run deploy && npm run open-releases",
+    "open-releases": "open \"$(node -e 'console.log(`https://github.com/${require(\"./package.json\").repository}/releases`)')\"",
+    "deploy": "now && now alias"
+  },
+  "dependencies": {
+    "compare-versions": "3.4.0",
+    "probot": "9.2.9",
+    "probot-config": "1.0.0",
+    "request": "2.88.0"
+  },
+  "devDependencies": {
+    "jest": "24.7.1",
+    "nock": "10.0.6",
+    "nodemon": "1.18.11",
+    "smee-client": "1.1.0",
+    "standard": "12.0.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js",
+      "lib/**"
+    ]
+  }
+}
